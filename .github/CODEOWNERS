@@ -1,0 +1,11 @@
+# Règle par défaut pour l'ensemble du projet : vous deux êtes reviewers
+* @Enzooog @elasnier
+
+# Edgar gère la CI et les modèles GitHub / documentation
+.github/workflows/ @elasnier
+.github/ISSUE_TEMPLATE/ @elasnier
+CONTRIBUTING.md @elasnier
+
+# Enzo gère la configuration générale du projet
+.github/CODEOWNERS @Enzooog
+README.md @Enzooog

@@ -5,7 +5,6 @@ const PORT = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
   const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
 
-  // Route de contrôle d'état (monitoring)
   if (req.method === 'GET' && parsedUrl.pathname === '/health') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
@@ -15,7 +14,6 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // Route d'accueil
   if (req.method === 'GET' && parsedUrl.pathname === '/') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
@@ -24,7 +22,6 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // 404 par défaut
   res.writeHead(404, { 'Content-Type': 'application/json' });
   res.end(JSON.stringify({
     error: 'Route introuvable'

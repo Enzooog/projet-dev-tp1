@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "echo \"No linting configured\""
+    "start": "node index.js",
+    "test": "node --test",
+    "lint": "node -c index.js test/health.test.js"
   },
   "keywords": [],
   "author": "",
